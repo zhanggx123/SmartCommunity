@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <parent>
+        <groupId>com.tqzl.sc</groupId>
+        <artifactId>SmartCommunity</artifactId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>appointment-api</module>
+        <module>community-api</module>
+        <module>equipment-api</module>
+        <module>expense-api</module>
+        <module>inspection-api</module>
+        <module>maintenance-api</module>
+        <module>office-api</module>
+        <module>organization-api</module>
+        <module>parking-api</module>
+        <module>procurement-api</module>
+        <module>real-api</module>
+        <module>repair-api</module>
+        <module>reports-api</module>
+        <module>system-api</module>
+    </modules>
+
+    <artifactId>service-api</artifactId>
+    <packaging>pom</packaging>
+
+    <description>
+        SmartCommunity-api 系统接口
+    </description>
+
+
+
+</project>

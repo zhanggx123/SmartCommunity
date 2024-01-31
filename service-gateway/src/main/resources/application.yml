@@ -1,0 +1,73 @@
+#spring:
+#  profiles:
+#    active: dev
+
+# Spring
+server:
+  port: 9999
+
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    nacos:
+      config:
+        import-check:
+          enabled: false
+        server-addr: 192.168.1.188:8848
+        file-extension: yml
+      discovery:
+        server-addr: 192.168.1.188:8848
+        namespace:
+    gateway:
+      discovery:
+        locator:
+          enabled: false
+      routes:
+        - id: tqzl-appointment
+          uri: lb://tqzl-appointment
+          predicates:
+            - Path=/appointment/*
+          filters:
+            - StripPrefix=1
+        # swagger文档1
+        - id: swagger-docs-appointment
+          uri: lb://tqzl-appointment
+          predicates:
+            - Path=/appointment/**
+            - Method=GET,POST
+          filters:
+            - name: StripPrefix
+              args:
+                - StripPrefix=1
+
+        - id: tqzl-community
+          uri: lb://tqzl-community
+          predicates:
+            - Path=/community/*
+          filters:
+            - StripPrefix=1
+        # swagger文档2
+        - id: swagger-docs-community
+          uri: lb://tqzl-community
+          predicates:
+            - Path=/community/**
+            - Method=GET,POST
+          filters:
+            - name: StripPrefix
+              args:
+                - StripPrefix=1
+
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "https://docs.spring.io"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true

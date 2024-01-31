@@ -1,0 +1,58 @@
+# Spring
+server:
+  port: 9999
+
+spring:
+  application:
+    name: service-gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 106.12.159.133
+        namespace:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+      routes:
+        - id: user_route
+          uri: lb://user_route
+          predicates:
+            - Path=/u/*
+          filters:
+            - StripPrefix=1
+        # swagger文档1
+        - id: swagger-docs-1
+          uri: lb://appointment_route
+          predicates:
+            - Path=/swagger_1/**
+            - Method=GET,POST
+          filters:
+            - name: StripPrefix
+              args:
+                - StripPrefix=1
+#
+#        # swagger文档2
+#        - id: swagger-docs-2
+#          uri: 转发地址
+#          predicates:
+#            - Path=/swagger_2/**
+#            - Method=GET,POST
+#          filters:
+#            - name: StripPrefix
+#              args:
+#                - StripPrefix=1
+
+      globalcors:
+        cors-configurations:
+          '[/**]':
+            allowedOrigins: "https://docs.spring.io"
+            allowedMethods:
+              - GET
+              - POST
+              - PUT
+              - PATCH
+              - DELETE
+              - OPTIONS
+            allowedHeaders: "*"
+            allowCredentials: true

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+
+    <parent>
+        <groupId>com.tqzl.sc</groupId>
+        <artifactId>SmartCommunity</artifactId>
+        <version>1.0.0.RELEASE</version>
+    </parent>
+
+    <modules>
+        <module>service-common-core</module>
+        <module>service-common-redis</module>
+    </modules>
+
+    <artifactId>service-common</artifactId>
+    <packaging>pom</packaging>
+    <description>
+        SmartCommunity-common 公共模块
+    </description>
+
+</project>
