@@ -77,3 +77,10 @@ spring:
               - OPTIONS
             allowedHeaders: "*"
             allowCredentials: true
+security:
+  captcha:
+    type: math
+    length: 6
+    expiration: 300
+    enabled: true
+
