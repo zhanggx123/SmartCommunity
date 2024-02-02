@@ -6,7 +6,7 @@ import com.google.code.kaptcha.Producer;
 import com.tqzl.core.constant.Constants;
 import com.tqzl.core.exception.BizException;
 import com.tqzl.core.model.domain.AjaxResult;
-import com.tqzl.gateway.config.captcha.CaptchaProperties;
+import com.tqzl.gateway.config.properties.CaptchaProperties;
 import com.tqzl.gateway.service.ValidateCodeService;
 import com.tqzl.redis.util.RedisUtil;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -4,6 +4,9 @@ import org.springframework.boot.context.properties.EnableConfigurationProperties
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+import springfox.documentation.builders.PathSelectors;
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
 import springfox.documentation.spi.DocumentationType;
@@ -50,11 +53,11 @@ public class SwaggerConfig {
                 .select()
                 // 只扫描特定包下的接口
                 .apis(RequestHandlerSelectors.basePackage(swaggerProperty.getBasePackage()))
-                //.apis(RequestHandlerSelectors.any())
-                //.apis(RequestHandlerSelectors.none())
-                //.apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
-                //.apis(RequestHandlerSelectors.withMethodAnnotation(GetMapping.class))
-                //.paths(PathSelectors.)
+                .apis(RequestHandlerSelectors.any())
+                .apis(RequestHandlerSelectors.none())
+                .apis(RequestHandlerSelectors.withClassAnnotation(RestController.class))
+                .apis(RequestHandlerSelectors.withMethodAnnotation(GetMapping.class))
+//                .paths(PathSelectors.)
                 .build();
     }
 

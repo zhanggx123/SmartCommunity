@@ -25,4 +25,8 @@ tqzl-swagger:
   version: "v1"
   base-package: "test1"
 
+app:
+  jwt-secret: 'Smart-Community'
+  jwt-expiration-milliseconds: '604800'
+
 
