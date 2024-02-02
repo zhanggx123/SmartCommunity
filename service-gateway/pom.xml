@@ -14,6 +14,19 @@
     <description>service-gateway 网关</description>
 
     <dependencies>
+
+<!--        <dependency>-->
+<!--            <groupId>com.tqzl.sc</groupId>-->
+<!--            <artifactId>service-common-core</artifactId>-->
+<!--            <version>1.0.0.RELEASE</version>-->
+<!--        </dependency>-->
+
+        <dependency>
+            <groupId>com.tqzl.sc</groupId>
+            <artifactId>service-common-redis</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+
         <!-- SpringCloud Gateway -->
         <dependency>
             <groupId>org.springframework.cloud</groupId>

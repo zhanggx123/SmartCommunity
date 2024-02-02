@@ -1,6 +1,6 @@
 package com.tqzl.auth.model;
 
-import com.tqzl.core.model.domain.UserDO;
+import com.tqzl.auth.model.domain.UserDO;
 import lombok.Data;
 
 import java.io.Serializable;

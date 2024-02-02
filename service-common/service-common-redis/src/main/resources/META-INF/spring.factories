@@ -1,2 +1,4 @@
 org.springframework.boot.autoconfigure.EnableAutoConfiguration=\
-com.tqzl.redis.config.SCRedisAutoConfiguration
+  com/tqzl/redis/config/RedisConfig,\
+  com/tqzl/redis/util/RedisUtil
+

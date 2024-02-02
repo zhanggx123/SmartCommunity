@@ -14,6 +14,7 @@
         <module>service-gateway</module>
         <module>service-modules</module>
         <module>service-api</module>
+        <module>service-auth</module>
     </modules>
 
     <properties>

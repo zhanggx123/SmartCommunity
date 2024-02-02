@@ -1,0 +1,28 @@
+server:
+  port: 9998
+spring:
+  mvc:
+    pathmatch:
+      # swagger3.0需要：ant_path_matcher
+      # springboot2.6后默认为：path_pattern_parser
+      matching-strategy: ant_path_matcher
+  application:
+    name: tqzl-auth
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.1.188:8848
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+
+# swagger配置
+tqzl-swagger:
+  author: "1"
+  title: "test1"
+  version: "v1"
+  base-package: "test1"
+
+

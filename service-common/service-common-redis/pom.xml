@@ -10,7 +10,7 @@
     </parent>
 
     <artifactId>service-common-redis</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <description>service-common-redis</description>
 
     <dependencies>
@@ -25,9 +25,9 @@
             <version>${redisson.version}</version>
         </dependency>
         <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-lang3</artifactId>
-            <version>${commons.version}</version>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-data-redis</artifactId>
+            <version>${spring-boot.version}</version>
         </dependency>
         <dependency>
             <groupId>cn.hutool</groupId>

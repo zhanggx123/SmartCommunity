@@ -17,8 +17,9 @@ import java.util.function.Supplier;
 
 /**
  * @author ZhangGuoxiang
- * @since 2024-01-024 14:56
+ * @since 2024-01-24 14:56
  **/
+@SuppressWarnings(value = {"unchecked", "rawtypes"})
 @Component
 public class RedisUtil {
 
@@ -65,6 +66,10 @@ public class RedisUtil {
     }
 
     public void set(String key, String value, long seconds) {
+        redisTemplate.opsForValue().set(key, value, seconds, TimeUnit.SECONDS);
+    }
+
+    public void set(String key, String value, long seconds, TimeUnit timeUnit) {
         redisTemplate.opsForValue().set(key, value, seconds, TimeUnit.SECONDS);
     }
 

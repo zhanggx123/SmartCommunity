@@ -1,4 +1,4 @@
-package com.tqzl.core.model.domain;
+package com.tqzl.auth.model.domain;
 
 /**
  * @Author ZhangGuoXiang
