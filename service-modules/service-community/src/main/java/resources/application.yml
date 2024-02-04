@@ -18,11 +18,5 @@ management:
       exposure:
         include: "*"
 
-# swagger配置
-tqzl-swagger:
-  author: "2"
-  title: "test2"
-  version: "v2"
-  base-package: "test"
 
 

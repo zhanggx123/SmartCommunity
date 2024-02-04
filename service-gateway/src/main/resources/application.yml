@@ -30,39 +30,20 @@ spring:
         locator:
           enabled: false
       routes:
+#       预约模块
         - id: tqzl-appointment
           uri: lb://tqzl-appointment
           predicates:
-            - Path=/appointment/*
+            - Path=/tqzl-appointment/**
           filters:
             - StripPrefix=1
-        # swagger文档1
-        - id: swagger-docs-appointment
-          uri: lb://tqzl-appointment
-          predicates:
-            - Path=/appointment/**
-            - Method=GET,POST
-          filters:
-            - name: StripPrefix
-              args:
-                - StripPrefix=1
-
+#        小区模块
         - id: tqzl-community
           uri: lb://tqzl-community
           predicates:
-            - Path=/community/*
+            - Path=/tqzl-community/**
           filters:
             - StripPrefix=1
-        # swagger文档2
-        - id: swagger-docs-community
-          uri: lb://tqzl-community
-          predicates:
-            - Path=/community/**
-            - Method=GET,POST
-          filters:
-            - name: StripPrefix
-              args:
-                - StripPrefix=1
 
       globalcors:
         cors-configurations:
@@ -83,5 +64,7 @@ security:
     length: 6
     expiration: 300
     enabled: true
-
+swagger:
+  username: admin
+  password: admin
 

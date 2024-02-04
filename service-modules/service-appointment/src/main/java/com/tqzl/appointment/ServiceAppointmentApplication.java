@@ -9,9 +9,6 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 @SpringBootApplication
 @EnableDiscoveryClient
 @EnableSwagger2
-@ComponentScan(basePackages = {
-        "com.tqzl"
-})
 public class ServiceAppointmentApplication {
 
     public static void main(String[] args) {

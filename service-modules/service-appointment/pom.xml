@@ -24,11 +24,6 @@
             <artifactId>service-common-swagger</artifactId>
             <version>1.0.0.RELEASE</version>
         </dependency>
-        <dependency>
-            <groupId>com.tqzl.sc</groupId>
-            <artifactId>service-common-security</artifactId>
-            <version>1.0.0.RELEASE</version>
-        </dependency>
     </dependencies>
 
 </project>

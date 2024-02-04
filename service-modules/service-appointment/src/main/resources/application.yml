@@ -17,16 +17,3 @@ management:
     web:
       exposure:
         include: "*"
-
-# swagger配置
-tqzl-swagger:
-  author: "1"
-  title: "test1"
-  version: "v1"
-  base-package: "test1"
-
-app:
-  jwt-secret: 'Smart-Community'
-  jwt-expiration-milliseconds: '604800'
-
-
