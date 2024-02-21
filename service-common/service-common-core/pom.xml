@@ -8,7 +8,7 @@
         <artifactId>service-common</artifactId>
         <version>1.0.0.RELEASE</version>
     </parent>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <artifactId>service-common-core</artifactId>
     <name>service-common-core</name>
     <description>service-common-core</description>
@@ -37,6 +37,31 @@
             <artifactId>springfox-swagger2</artifactId>
             <version>${swagger.fox.version}</version>
         </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.datatype</groupId>
+            <artifactId>jackson-datatype-jsr310</artifactId>
+            <version>${jackson.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.jsonwebtoken</groupId>
+            <artifactId>jjwt</artifactId>
+        </dependency>
+
 
     </dependencies>
 

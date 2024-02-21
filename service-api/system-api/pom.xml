@@ -10,8 +10,25 @@
     </parent>
 
     <artifactId>system-api</artifactId>
-    <packaging>pom</packaging>
+    <packaging>jar</packaging>
     <description>system-api</description>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.tqzl.sc</groupId>
+            <artifactId>service-common-core</artifactId>
+            <version>1.0.0.RELEASE</version>
+        </dependency>
+        <!-- SpringCloud Openfeign -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-openfeign</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-web</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

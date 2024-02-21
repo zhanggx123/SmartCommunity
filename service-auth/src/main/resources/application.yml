@@ -1,6 +1,8 @@
 server:
   port: 9998
 spring:
+  main:
+    allow-bean-definition-overriding: true
   mvc:
     pathmatch:
       # swagger3.0需要：ant_path_matcher
@@ -11,18 +13,13 @@ spring:
   cloud:
     nacos:
       discovery:
-        server-addr: 192.168.1.188:8848
+        server-addr: 127.0.0.1:8848
 management:
   endpoints:
     web:
       exposure:
         include: "*"
 
-# swagger配置
-tqzl-swagger:
-  author: "1"
-  title: "test1"
-  version: "v1"
-  base-package: "test1"
+
 
 

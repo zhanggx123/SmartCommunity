@@ -5,19 +5,23 @@
 
     <parent>
         <groupId>com.tqzl.sc</groupId>
-        <artifactId>service-modules</artifactId>
+        <artifactId>service-common</artifactId>
         <version>1.0.0.RELEASE</version>
     </parent>
 
-    <artifactId>service-reports</artifactId>
+    <artifactId>service-common-log</artifactId>
     <packaging>jar</packaging>
-    <description>service-reports</description>
+    <name>service-common-log</name>
+    <description>service-common-log</description>
 
     <dependencies>
         <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-web</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>${lombok.version}</version>
         </dependency>
+
     </dependencies>
+
 
 </project>

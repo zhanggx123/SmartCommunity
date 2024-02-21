@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tqzl.system.mapper.SysUserMapper">
+
+
+    <select id="queryUserById" resultType="com.tqzl.api.domain.UserVO">
+        select sys_id,
+               user_id,
+               name,
+               password,
+               email,
+               avatar,
+               address,
+               sex,
+               tel,
+               status,
+               create_time,
+               last_modified_date
+        from u_user
+        where user_id = #{userId} and status = 1
+
+    </select>
+
+    <select id="queryUserByUserName" resultType="com.tqzl.api.domain.UserVO">
+        select sys_id,
+               user_id,
+               name,
+               password,
+               email,
+               avatar,
+               address,
+               sex,
+               tel,
+               status,
+               create_time,
+               last_modified_date
+        from u_user
+        where name = #{userName} and status = 1;
+    </select>
+
+    <update id="updateUserById">
+        update u_user
+        set status = 0
+        where user_id = #{userId}
+    </update>
+
+
+</mapper>

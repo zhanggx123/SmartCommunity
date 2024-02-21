@@ -1,0 +1,30 @@
+server:
+  port: 9503
+
+spring:
+  mvc:
+    pathmatch:
+      # swagger3.0需要：ant_path_matcher
+      # springboot2.6后默认为：path_pattern_parser
+      matching-strategy: ant_path_matcher
+  application:
+    name: tqzl-system
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 127.0.0.1:8848
+  datasource:
+    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://106.12.159.133:3306/smart_community?useUnicode=true&characterEncoding=utf8&useSSL=false&autoReconnect=true&failOverReadOnly=false&allowPublicKeyRetrieval=true&allowMultiQueries=true&rewriteBatchedStatements=true
+    username: root
+    password: Tqzl!@#$1234
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+mybatis:
+  mapper-locations: classpath*:/mapper/*Mapper.xml
+  type-aliases-package: com.tqzl.api.domain
+  configuration:
+    map-underscore-to-camel-case: true

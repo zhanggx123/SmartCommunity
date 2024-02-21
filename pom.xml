@@ -40,6 +40,8 @@
         <commons.version>3.12.0</commons.version>
         <transmittable-thread-local.version>2.14.4</transmittable-thread-local.version>
         <jjwt.version>0.9.1</jjwt.version>
+        <jackson.version>2.15.0</jackson.version>
+        <mysql.vsersion>8.0.31</mysql.vsersion>
     </properties>
 
     <dependencyManagement>
@@ -76,6 +78,17 @@
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${spring-boot.mybatis}</version>
             </dependency>
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.vsersion}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+
 
             <!-- Swagger 依赖配置 -->
             <dependency>
@@ -139,6 +152,11 @@
                 <groupId>io.jsonwebtoken</groupId>
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-core</artifactId>
+                <version>${jackson.version}</version>
             </dependency>
 
 
