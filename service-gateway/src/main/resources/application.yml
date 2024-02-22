@@ -45,10 +45,17 @@ spring:
           filters:
             - StripPrefix=1
 #        系统模块
-        - id: tqzl-community
+        - id: tqzl-system
           uri: lb://tqzl-system
           predicates:
             - Path=/tqzl-system/**
+          filters:
+            - StripPrefix=1
+#        认证模块
+        - id: tqzl-auth
+          uri: lb://tqzl-auth
+          predicates:
+            - Path=/auth/**
           filters:
             - StripPrefix=1
 
