@@ -12,7 +12,7 @@ import lombok.Data;
  * @see [相关类/方法]
  * @since [产品/模板版本号]
  */
-@ApiModel("用户权限视图对象")
+@ApiModel("权限视图对象")
 @Data
 public class SysMenuRoleVO extends BaseEntity {
 

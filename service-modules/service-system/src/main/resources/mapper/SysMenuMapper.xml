@@ -3,4 +3,28 @@
 <mapper namespace="com.tqzl.system.mapper.SysMenuMapper">
 
 
+    <select id="queryMenuById" resultType="com.tqzl.system.domain.SysMenuVO">
+        select sys_id,
+               menu_id,
+               parent_id,
+               menu_name,
+               path,
+               component,
+               perms,
+               icon,
+               type,
+               order_num,
+               create_time,
+               last_modifiend_time,
+               status
+        from u_menu
+        where menu_id = #{menuId} and status =1;
+    </select>
+
+    <update id="deleteMenuById">
+        update u_menu
+        set status =0
+        where menu_id = #{menuId};
+    </update>
+
 </mapper>

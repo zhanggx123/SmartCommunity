@@ -1,5 +1,6 @@
 package com.tqzl.system.mapper;
 
+import com.tqzl.system.domain.SysMenuVO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -11,4 +12,19 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface SysMenuMapper {
+
+    /**
+     * 通过菜单id查询权限视图
+     * @param menuId
+     * @return
+     */
+    SysMenuVO queryMenuById(int menuId);
+
+    /**
+     * 通过菜单id删除权限视图
+     * @param menuId
+     * @return
+     */
+    int deleteMenuById(int menuId);
+
 }

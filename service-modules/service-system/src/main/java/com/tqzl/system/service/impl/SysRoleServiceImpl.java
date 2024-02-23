@@ -1,6 +1,9 @@
 package com.tqzl.system.service.impl;
 
+import com.tqzl.system.domain.SysRoleVO;
+import com.tqzl.system.mapper.SysRoleMapper;
 import com.tqzl.system.service.ISysRoleService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 /**
@@ -12,4 +15,20 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class SysRoleServiceImpl implements ISysRoleService {
+
+    private final SysRoleMapper roleMapper;
+
+    public SysRoleServiceImpl(SysRoleMapper roleMapper) {
+        this.roleMapper = roleMapper;
+    }
+
+    @Override
+    public SysRoleVO queryRoleByRoleId(int roleId) {
+        return roleMapper.queryRoleByRoleId(roleId);
+    }
+
+    @Override
+    public int deleteRoleByRoleId(int roleId) {
+        return roleMapper.deleteRoleByRoleId(roleId);
+    }
 }

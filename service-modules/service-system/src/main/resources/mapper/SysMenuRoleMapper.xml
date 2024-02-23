@@ -3,4 +3,17 @@
 <mapper namespace="com.tqzl.system.mapper.SysMenuRoleMapper">
 
 
+
+    <select id="queryMenuRoleById" resultType="com.tqzl.system.domain.SysMenuRoleVO">
+        select sys_id, mid, rid, create_time, last_modified_time, status
+        from u_menu_role
+        where mid = #{mid} and  status = 1;
+    </select>
+
+    <update id="deleteMenuRoleById">
+        update u_menu_role
+        set status = 0
+        where mid = #{mid}
+    </update>
+
 </mapper>

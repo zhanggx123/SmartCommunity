@@ -1,5 +1,6 @@
 package com.tqzl.system.mapper;
 
+import com.tqzl.system.domain.SysRoleVO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -11,4 +12,22 @@ import org.apache.ibatis.annotations.Mapper;
  */
 @Mapper
 public interface SysRoleMapper {
+
+
+    /**
+     * 通过角色id查询角色
+     * @param roleId
+     * @return
+     */
+    SysRoleVO queryRoleByRoleId(int roleId);
+
+    /**
+     * 通过角色id删除角色
+     * @param roleId
+     * @return
+     */
+    int deleteRoleByRoleId(int roleId);
+
+
+
 }
