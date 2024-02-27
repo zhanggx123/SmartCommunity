@@ -48,7 +48,7 @@ spring:
         - id: tqzl-system
           uri: lb://tqzl-system
           predicates:
-            - Path=/tqzl-system/**
+            - Path=/system/**
           filters:
             - StripPrefix=1
 #        认证模块

@@ -1,6 +1,7 @@
 package com.tqzl.system.service;
 
 import com.tqzl.system.domain.SysMenuRoleVO;
+import com.tqzl.system.domain.SysMenuVO;
 
 /**
  * @Author ZhangGuoXiang
@@ -16,7 +17,7 @@ public interface ISysMenuService {
      * @param mid
      * @return
      */
-    SysMenuRoleVO queryMenuRoleById(int mid);
+    SysMenuVO queryMenuRoleById(int mid);
 
     /**
      * 通过菜单id删除权限
