@@ -3,7 +3,18 @@
 <mapper namespace="com.tqzl.system.mapper.SysMenuRoleMapper">
 
     <insert id="insertMenuRole">
-
+        INSERT INTO u_menu_role
+            (mid,
+             rid,
+--              create_time,
+--              last_modified_time,
+             status)
+        VALUES (
+                #{dto.mid},
+                #{dto.rid},
+--                 CURRENT_TIMESTAMP,
+--                 #{lastModifiedTime},
+                1)
     </insert>
 
 
@@ -20,7 +31,13 @@
     </update>
 
     <update id="updateMenuRole">
-
+        UPDATE u_menu_role
+        SET
+            mid = #{dto.mid},
+            rid = #{dto.rid},
+            last_modified_time = CURRENT_TIMESTAMP,
+        WHERE
+            sys_id = #{dto.sysId}
     </update>
 
 </mapper>

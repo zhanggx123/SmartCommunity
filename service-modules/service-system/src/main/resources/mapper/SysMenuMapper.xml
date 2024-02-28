@@ -3,7 +3,31 @@
 <mapper namespace="com.tqzl.system.mapper.SysMenuMapper">
 
     <insert id="insertMenu">
-
+        INSERT INTO u_menu (
+                            menu_id,
+                            parent_id,
+                            menu_name,
+                            path,
+                            component,
+                            perms,
+                            icon,
+                            type,
+                            order_num,
+--                             create_time,
+--                             last_modified_time,
+                            status)
+        VALUES (#{dto.menuId},
+                #{dto.parentId},
+                #{dto.menuName},
+                #{dto.path},
+                #{dto.component},
+                #{dto.perms},
+                #{dto.icon},
+                #{dto.type},
+                #{dto.orderNum},
+--                 CURRENT_TIMESTAMP,
+--                 #{lastModifiedTime},
+                1)
     </insert>
 
 
@@ -32,7 +56,20 @@
     </update>
 
     <update id="updateMenu">
-
+        UPDATE u_menu
+        SET
+            menu_id = #{dto.menuId},
+            parent_id = #{dto.parentId},
+            menu_name = #{dto.menuName},
+            path = #{dto.path},
+            component = #{dto.component},
+            perms = #{dto.perms},
+            icon = #{dto.icon},
+            type = #{dto.type},
+            order_num = #{dto.orderNum},
+            last_modifiend_time = CURRENT_TIMESTAMP,
+        WHERE
+            sys_id = #{dto.sysId}
     </update>
 
 </mapper>

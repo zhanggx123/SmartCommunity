@@ -2,6 +2,17 @@
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.tqzl.system.mapper.SysRoleMapper">
     <insert id="insertRole">
+        INSERT INTO u_role (
+                            role_id,
+                            role_name,
+--                             create_time,
+--                             last_modified_time,
+                            status)
+        VALUES (#{dto.roleId},
+                #{dto.roleName},
+--                 CURRENT_TIMESTAMP,
+--                 #{lastModifiedTime},
+                1)
 
     </insert>
 
@@ -17,6 +28,13 @@
         where role_id = #{roleId} and status = 1;
     </update>
     <update id="updateRole">
+        UPDATE u_role
+        SET
+            role_id = #{dto.roleId},
+            role_name = #{dto.roleName},
+            last_modified_time = CURRENT_TIMESTAMP
+        WHERE
+            sys_id = #{dto.sysId}
 
     </update>
 
