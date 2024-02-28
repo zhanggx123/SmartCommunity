@@ -2,6 +2,7 @@ package com.tqzl.system.service.impl;
 
 import com.tqzl.system.domain.SysMenuRoleVO;
 import com.tqzl.system.domain.SysMenuVO;
+import com.tqzl.system.domain.dto.MenuRoleDTO;
 import com.tqzl.system.mapper.SysMenuRoleMapper;
 import com.tqzl.system.service.ISysMenuRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -31,5 +32,15 @@ public class SysMenuRoleServiceImpl implements ISysMenuRoleService {
     @Override
     public int deleteMenuById(int menuId) {
         return menuRoleMapper.deleteMenuRoleById(menuId);
+    }
+
+    @Override
+    public int insertMenuRole(MenuRoleDTO dto) {
+        return menuRoleMapper.insertMenuRole(dto);
+    }
+
+    @Override
+    public int updateMenuRole(MenuRoleDTO dto) {
+        return menuRoleMapper.updateMenuRole(dto);
     }
 }

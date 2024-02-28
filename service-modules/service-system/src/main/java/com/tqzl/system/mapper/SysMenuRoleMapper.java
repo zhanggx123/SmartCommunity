@@ -1,6 +1,7 @@
 package com.tqzl.system.mapper;
 
 import com.tqzl.system.domain.SysMenuRoleVO;
+import com.tqzl.system.domain.dto.MenuRoleDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -27,4 +28,17 @@ public interface SysMenuRoleMapper {
      */
     int deleteMenuRoleById(int mid);
 
+    /**
+     * 新增权限
+     * @param dto
+     * @return
+     */
+    int insertMenuRole(MenuRoleDTO dto);
+
+    /**
+     * 修改权限
+     * @param dto
+     * @return
+     */
+    int updateMenuRole(MenuRoleDTO dto);
 }

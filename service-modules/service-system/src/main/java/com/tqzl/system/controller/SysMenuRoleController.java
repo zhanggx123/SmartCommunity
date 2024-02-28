@@ -4,6 +4,9 @@ import com.tqzl.core.model.CommonResult;
 import com.tqzl.system.domain.SysMenuRoleVO;
 import com.tqzl.system.domain.SysMenuVO;
 import com.tqzl.system.domain.SysRoleVO;
+import com.tqzl.system.domain.dto.MenuDTO;
+import com.tqzl.system.domain.dto.MenuRoleDTO;
+import com.tqzl.system.domain.dto.RoleDTO;
 import com.tqzl.system.handler.MenuRoleHandler;
 import io.swagger.annotations.Api;
 import org.springframework.http.MediaType;
@@ -60,6 +63,36 @@ public class SysMenuRoleController {
     @PostMapping(value = "/deleteRole" ,produces = MediaType.APPLICATION_JSON_VALUE)
     public CommonResult deleteRoleByRoleId(int id){
         int flag = menuRoleHandler.deleteRoleByRoleId(id);
+        return flag > 0 ? CommonResult.success("更新成功!") : CommonResult.error("更新失败");
+    }
+
+    @PostMapping(value = "/addMenu" , produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult addMenu(@RequestBody MenuDTO dto){
+        int flag = menuRoleHandler.addMenu(dto);
+        return flag > 0 ? CommonResult.success("更新成功!") : CommonResult.error("更新失败");
+    }
+
+    @PostMapping(value = "/updateMenu", produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult updateMenu(@RequestBody MenuDTO dto){
+        int flag = menuRoleHandler.updateMenu(dto);
+        return flag > 0 ? CommonResult.success("更新成功!") : CommonResult.error("更新失败");
+    }
+
+    @PostMapping(value = "/addMenuRole" , produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult addMenuRole(@RequestBody MenuRoleDTO dto){
+        int flag = menuRoleHandler.addMenuRole(dto);
+        return flag > 0 ? CommonResult.success("更新成功!") : CommonResult.error("更新失败");
+    }
+
+    @PostMapping(value = "/addRole", produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult addRole(@RequestBody RoleDTO dto){
+        int flag = menuRoleHandler.addRole(dto);
+        return flag > 0 ? CommonResult.success("更新成功!") : CommonResult.error("更新失败");
+    }
+
+    @PostMapping(value = "/updateRole", produces = MediaType.APPLICATION_JSON_VALUE)
+    public CommonResult updateRole(@RequestBody RoleDTO dto){
+        int flag = menuRoleHandler.updateRole(dto);
         return flag > 0 ? CommonResult.success("更新成功!") : CommonResult.error("更新失败");
     }
 

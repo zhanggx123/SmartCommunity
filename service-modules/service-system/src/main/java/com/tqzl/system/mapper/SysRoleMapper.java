@@ -1,6 +1,7 @@
 package com.tqzl.system.mapper;
 
 import com.tqzl.system.domain.SysRoleVO;
+import com.tqzl.system.domain.dto.RoleDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -28,6 +29,17 @@ public interface SysRoleMapper {
      */
     int deleteRoleByRoleId(int roleId);
 
+    /**
+     * 新增角色
+     * @param dto
+     * @return
+     */
+    int insertRole(RoleDTO dto);
 
-
+    /**
+     * 修改角色
+     * @param dto
+     * @return
+     */
+    int updateRole(RoleDTO dto);
 }

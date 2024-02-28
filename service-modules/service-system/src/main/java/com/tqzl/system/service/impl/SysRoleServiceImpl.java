@@ -1,6 +1,7 @@
 package com.tqzl.system.service.impl;
 
 import com.tqzl.system.domain.SysRoleVO;
+import com.tqzl.system.domain.dto.RoleDTO;
 import com.tqzl.system.mapper.SysRoleMapper;
 import com.tqzl.system.service.ISysRoleService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,5 +31,15 @@ public class SysRoleServiceImpl implements ISysRoleService {
     @Override
     public int deleteRoleByRoleId(int roleId) {
         return roleMapper.deleteRoleByRoleId(roleId);
+    }
+
+    @Override
+    public int insertRole(RoleDTO dto) {
+        return roleMapper.insertRole(dto);
+    }
+
+    @Override
+    public int updateRole(RoleDTO dto) {
+        return roleMapper.updateRole(dto);
     }
 }

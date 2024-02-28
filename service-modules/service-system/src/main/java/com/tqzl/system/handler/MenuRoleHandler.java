@@ -3,6 +3,9 @@ package com.tqzl.system.handler;
 import com.tqzl.system.domain.SysMenuRoleVO;
 import com.tqzl.system.domain.SysMenuVO;
 import com.tqzl.system.domain.SysRoleVO;
+import com.tqzl.system.domain.dto.MenuDTO;
+import com.tqzl.system.domain.dto.MenuRoleDTO;
+import com.tqzl.system.domain.dto.RoleDTO;
 import com.tqzl.system.service.ISysMenuRoleService;
 import com.tqzl.system.service.ISysMenuService;
 import com.tqzl.system.service.ISysRoleService;
@@ -54,6 +57,30 @@ public class MenuRoleHandler {
 
     public int deleteRoleByRoleId(int roleId){
         return roleService.deleteRoleByRoleId(roleId);
+    }
+
+    public int addMenu(MenuDTO dto){
+        return menuService.insertMenu(dto);
+    }
+
+    public int updateMenu(MenuDTO dto){
+        return menuService.updateMenu(dto);
+    }
+
+    public int addRole(RoleDTO dto){
+        return roleService.insertRole(dto);
+    }
+
+    public int updateRole(RoleDTO dto){
+        return roleService.updateRole(dto);
+    }
+
+    public int addMenuRole(MenuRoleDTO dto){
+        return menuRoleService.insertMenuRole(dto);
+    }
+
+    public int updateMenuRole(MenuRoleDTO dto){
+        return menuRoleService.updateMenuRole(dto);
     }
 
 

@@ -2,6 +2,7 @@ package com.tqzl.system.service.impl;
 
 import com.tqzl.system.domain.SysMenuRoleVO;
 import com.tqzl.system.domain.SysMenuVO;
+import com.tqzl.system.domain.dto.MenuDTO;
 import com.tqzl.system.mapper.SysMenuMapper;
 import com.tqzl.system.mapper.SysMenuRoleMapper;
 import com.tqzl.system.service.ISysMenuService;
@@ -32,5 +33,15 @@ public class SysMenuServiceImpl implements ISysMenuService {
     @Override
     public int deleteMenuRoleById(int mid) {
         return menuMapper.deleteMenuById(mid);
+    }
+
+    @Override
+    public int insertMenu(MenuDTO dto) {
+        return menuMapper.insertMenu(dto);
+    }
+
+    @Override
+    public int updateMenu(MenuDTO dto) {
+        return menuMapper.updateMenu(dto);
     }
 }

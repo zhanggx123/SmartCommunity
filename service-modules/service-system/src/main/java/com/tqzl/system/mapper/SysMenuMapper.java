@@ -1,6 +1,7 @@
 package com.tqzl.system.mapper;
 
 import com.tqzl.system.domain.SysMenuVO;
+import com.tqzl.system.domain.dto.MenuDTO;
 import org.apache.ibatis.annotations.Mapper;
 
 /**
@@ -26,5 +27,19 @@ public interface SysMenuMapper {
      * @return
      */
     int deleteMenuById(int menuId);
+
+    /**
+     *新增权限视图
+     * @param dto
+     * @return
+     */
+    int insertMenu(MenuDTO dto);
+
+    /**
+     * 修改权限视图
+     * @param dto
+     * @return
+     */
+    int updateMenu(MenuDTO dto);
 
 }

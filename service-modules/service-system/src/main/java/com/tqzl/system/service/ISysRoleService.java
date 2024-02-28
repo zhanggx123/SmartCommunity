@@ -1,6 +1,7 @@
 package com.tqzl.system.service;
 
 import com.tqzl.system.domain.SysRoleVO;
+import com.tqzl.system.domain.dto.RoleDTO;
 
 /**
  * @Author ZhangGuoXiang
@@ -24,4 +25,18 @@ public interface ISysRoleService {
      * @return
      */
     int deleteRoleByRoleId(int roleId);
+
+    /**
+     * 新增角色
+     * @param dto
+     * @return
+     */
+    int insertRole(RoleDTO dto);
+
+    /**
+     * 修改角色
+     * @param dto
+     * @return
+     */
+    int updateRole(RoleDTO dto);
 }

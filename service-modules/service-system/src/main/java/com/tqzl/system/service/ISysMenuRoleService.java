@@ -2,6 +2,7 @@ package com.tqzl.system.service;
 
 import com.tqzl.system.domain.SysMenuRoleVO;
 import com.tqzl.system.domain.SysMenuVO;
+import com.tqzl.system.domain.dto.MenuRoleDTO;
 
 /**
  * @Author ZhangGuoXiang
@@ -25,5 +26,19 @@ public interface ISysMenuRoleService {
      * @return
      */
     int deleteMenuById(int menuId);
+
+    /**
+     * 新增权限
+     * @param dto
+     * @return
+     */
+    int insertMenuRole(MenuRoleDTO dto);
+
+    /**
+     * 修改权限
+     * @param dto
+     * @return
+     */
+    int updateMenuRole(MenuRoleDTO dto);
 
 }
